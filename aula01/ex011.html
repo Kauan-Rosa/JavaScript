@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Em que País você mora?</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Informar" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar() {
+            var n1 = document.getElementById('pais');
+            var res = document.getElementById('res');
+            var p = n1.value;
+            res.innerHTML = `<p>Você vive no país ${p}</p>`;
+            if (p == 'Brasil') {
+                res.innerHTML += '<p>Você é Brasileiro!</p>';
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro!</p>';
+            }
+        }
+    </script>
+</body>
+</html>
